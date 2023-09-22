@@ -1,14 +1,20 @@
-
-import './App.css';
+import React from 'react';
+import AddMedicine from './AddMedicine';
+import MedicineList from './MedicineList';
+import { MedicineProvider } from './MedicineContext';
+import Header from './Header';
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-          
-      </header>
-    </div>
+    <MedicineProvider >
+      <div >
+      <Header /> 
+        <AddMedicine />
+        <MedicineList />
+        
+      </div>
+    </MedicineProvider>
   );
 }
 
